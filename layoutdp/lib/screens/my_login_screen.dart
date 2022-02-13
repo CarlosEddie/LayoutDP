@@ -15,7 +15,12 @@ class MyLoginScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
+              children: const [
+                Image(
+                  image: AssetImage("assets/images/dpLogo.png"),
+                  height: 127.36,
+                  width: 241,
+                ),
               ],
             ),
           ),
