@@ -56,7 +56,9 @@ class MyLoginScreen extends StatelessWidget {
                 style: TextButton.styleFrom(
                   primary: const Color(0xFF707375),
                 ),
-                onPressed:(){}, 
+                onPressed:(){
+                  Navigator.pushNamed(context, "/myHomePageScreen");
+                }, 
                 child: const Text('Skip'))
             ],
           ),
