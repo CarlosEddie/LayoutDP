@@ -14,31 +14,50 @@ class MyLoginScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
-              Align(
-                alignment: Alignment.center,
-                child: Image(
-                  image: AssetImage("assets/images/dpLogo.png"),
-                  height: 127.36,
-                  width: 241,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                margin: const EdgeInsets.symmetric(vertical: 50.0, horizontal: 20.0),
+                child: Column(
+                  children: const [
+                    Align(
+                      alignment: Alignment.center,
+                      child: Image(
+                        image: AssetImage("assets/images/dpLogo.png"),
+                        height: 127.36,
+                        width: 241,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              MyLoginButton(
-                width: 273, 
-                height: 62, 
-                text: 'Sign up with Email',
-                background: deepBlue, 
-                textColor: Colors.white,
+              Container(
+                margin: const EdgeInsets.only(top: 50, bottom: 25),
+                child: Column(
+                  children: const [
+                    MyLoginButton(
+                      width: 273, 
+                      height: 62, 
+                      text: 'Sign up with Email',
+                      background: deepBlue, 
+                      textColor: Colors.white,
+                    ),
+                    MyLoginButton(
+                      width: 273, 
+                      height: 62, 
+                      text: 'Sign up with Email',
+                      background: Colors.white, 
+                      textColor: Color(0xFF707375),
+                    ),
+                  ],
+                ),
               ),
-              MyLoginButton(
-                width: 273, 
-                height: 62, 
-                text: 'Sign up with Email',
-                background: Colors.white, 
-                textColor: Color(0xFF707375),
-              ),
-              Text("data")
+              TextButton(
+                style: TextButton.styleFrom(
+                  primary: const Color(0xFF707375),
+                ),
+                onPressed:(){}, 
+                child: const Text('Skip'))
             ],
           ),
         ),

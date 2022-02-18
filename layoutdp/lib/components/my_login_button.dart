@@ -19,28 +19,37 @@ class MyLoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ButtonStyle(
-        elevation: MaterialStateProperty.all<double>(0.0),
-        fixedSize: MaterialStateProperty.all<Size>(
-          Size(width, height),
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(color: const Color(0xFF00147A), width: 2),
+          borderRadius: BorderRadius.circular(69),
         ),
-        foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-        backgroundColor: MaterialStateProperty.all<Color>(background),
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(69),
+        child: ElevatedButton(
+          style: ButtonStyle(
+            elevation: MaterialStateProperty.all<double>(0.0),
+            fixedSize: MaterialStateProperty.all<Size>(
+              Size(width, height),
+            ),
+            foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+            backgroundColor: MaterialStateProperty.all<Color>(background),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(69),
+              ),
+            ),
           ),
-        ),
-      ),
-      onPressed: () {
-        Navigator.pushNamed(context, "/myHomePageScreen");
-      },
-      child: Center(
-        child: Text(
-          text.toUpperCase(),
-          style: TextStyle(
-            color: textColor
+          onPressed: () {
+            Navigator.pushNamed(context, "/myHomePageScreen");
+          },
+          child: Center(
+            child: Text(
+              text.toUpperCase(),
+              style: TextStyle(
+                color: textColor
+              ),
+            ),
           ),
         ),
       ),
