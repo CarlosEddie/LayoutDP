@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:layoutdp/components/my_brand_button.dart';
 import 'package:layoutdp/components/my_custom_icon_button.dart';
+import 'package:layoutdp/components/my_featured_movie.dart';
 import 'package:layoutdp/components/my_new_movie.dart';
 
 import '../constant.dart';
@@ -19,10 +20,10 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
       backgroundColor: backgroundColor,
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Container(
-              margin: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 20.0),
+              margin: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -44,8 +45,8 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
                     height: 41.0,
                   ),
                   MyCustomIconButton(
-                    width: 48, 
-                    height: 49, 
+                    width: 48,
+                    height: 49,
                     icon: Icon (
                       Icons.favorite_border,
                       color: deepBlue,
@@ -57,14 +58,9 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
                 ],
               ),
             ),
+            MyFeaturedMovie(),
             Container(
-              margin: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 20.0),
-              width: 327,
-              height: 195,
-              color: Colors.black,
-            ),
-            Container(
-              margin: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 20.0),
+              margin: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Column(
                 children: [
                   Container(
@@ -86,9 +82,9 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        MyBrandButton(image: "assets/images/perfil.png", background: Colors.white),
-                        MyBrandButton(image: "assets/images/perfil.png", background: Colors.white),
-                        MyBrandButton(image: "assets/images/perfil.png", background: Colors.white),
+                        MyBrandButton(image: "assets/images/disneyBrand.png", background: Colors.white),
+                        MyBrandButton(image: "assets/images/pixarBrand.png", background: Colors.white),
+                        MyBrandButton(image: "assets/images/marvelBrand.png", background: Colors.white),
                       ],
                     ),
                   )
@@ -96,8 +92,9 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
               ),
             ),
             Container(
-              margin: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 20.0),
+              margin: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
                     child: Row(
@@ -126,10 +123,11 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
                     ),
                   ),
                   Container(
+                    margin: const EdgeInsets.symmetric(vertical: 5.0),
                     child: Row(
                       children: [
                         MyNewMovie(
-                          image: "assets/images/perfil.png", 
+                          image: "assets/images/legoStarWars.png", 
                           title: "Lego Star Wars Terrifying Tal", 
                           time: "1 hour", 
                           rating: "9.5"
@@ -138,9 +136,43 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
                     ),
                   ),
                   Container(
+                    width: 327,
+                    height: 68,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(19),
+                      color: Colors.white, 
+                    ),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        IconButton(onPressed: () {}, icon: Icon(Icons.play_arrow))
+                        IconButton(
+                          onPressed: () {}, 
+                          icon: Icon(
+                            Icons.airplay,
+                            color: deepBlue,
+                          )
+                        ),
+                        IconButton(
+                          onPressed: () {}, 
+                          icon: Icon(
+                            Icons.search,
+                            color: deepBlue,
+                          )
+                        ),
+                        IconButton(
+                          onPressed: () {}, 
+                          icon: Icon(
+                            Icons.notifications_none,
+                            color: deepBlue,
+                          )
+                        ),
+                        IconButton(
+                          onPressed: () {}, 
+                          icon: Icon(
+                            Icons.widgets_outlined,
+                            color: deepBlue,
+                          )
+                        ),
                       ],
                     ),
                   ),
