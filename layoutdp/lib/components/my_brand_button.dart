@@ -18,9 +18,9 @@ class MyBrandButton extends StatelessWidget {
       height: 63,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
+        color: background,
         image: DecorationImage(
           image: AssetImage(image),
-          fit: BoxFit.fill
         ),
       ),
     );
