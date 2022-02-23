@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../constant.dart';
-
 class MyBrandButton extends StatelessWidget {
   final String image;
   final Color background;
@@ -13,16 +11,19 @@ class MyBrandButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 101,
-      height: 63,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        color: background,
-        image: DecorationImage(
-          image: AssetImage(image),
+    return GestureDetector(
+      child: Container(
+        width: 101,
+        height: 63,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
+          color: background,
+          image: DecorationImage(
+            image: AssetImage(image),
+          ),
         ),
       ),
+      onTap: () {},
     );
   }
 }
