@@ -124,15 +124,36 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
                   ),
                   Container(
                     margin: const EdgeInsets.symmetric(vertical: 5.0),
-                    child: Row(
-                      children: [
-                        MyNewMovie(
-                          image: "assets/images/legoStarWars.png", 
-                          title: "Lego Star Wars Terrifying Tal", 
-                          time: "1 hour", 
-                          rating: "9.5"
-                        ),
-                      ],
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          MyNewMovie(
+                            image: "assets/images/legoStarWars.png", 
+                            title: "Lego Star Wars Terrifying Tal", 
+                            time: "1 hour", 
+                            rating: "9.5"
+                          ),
+                          MyNewMovie(
+                            image: "assets/images/jungleCruise.png", 
+                            title: "Jungle Cruise", 
+                            time: "1 hour", 
+                            rating: "9.5"
+                          ),
+                          MyNewMovie(
+                            image: "assets/images/legoStarWars.png", 
+                            title: "Lego Star Wars Terrifying Tal", 
+                            time: "1 hour", 
+                            rating: "9.5"
+                          ),
+                          MyNewMovie(
+                            image: "assets/images/legoStarWars.png", 
+                            title: "Jungle Cruise", 
+                            time: "1 hour", 
+                            rating: "9.5"
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Container(
