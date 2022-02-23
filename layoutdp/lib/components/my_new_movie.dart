@@ -25,6 +25,7 @@ class MyNewMovie extends StatelessWidget {
           Container(
             width: 189,
             height: 202,
+            margin: EdgeInsets.all(5),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: Colors.white,
@@ -43,13 +44,20 @@ class MyNewMovie extends StatelessWidget {
                     ),
                   ),
                 ),
-                Text(
-                  title,
-                  style: TextStyle(
-                    fontSize: 12.0,
-                    color: Colors.black,
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 18),
+                    child: Text(
+                    title,
+                    style: TextStyle(
+                      fontSize: 12.0,
+                      color: Colors.black,
+                      ),
+                    ),
                   ),
                 ),
+                
                 Container(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
