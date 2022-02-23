@@ -23,7 +23,7 @@ class MyLoginButton extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: Container(
         decoration: BoxDecoration(
-          border: Border.all(color: const Color(0xFF00147A), width: 2),
+          border: Border.all(color: deepBlue, width: 2),
           borderRadius: BorderRadius.circular(69),
         ),
         child: ElevatedButton(

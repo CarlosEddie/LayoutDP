@@ -84,7 +84,7 @@ class MyNewMovie extends StatelessWidget {
                             ),
                             Icon(
                               Icons.star,
-                              color: Color(0xFFFFB800),
+                              color: starYellow,
                               size: 12,
                             )
                           ],

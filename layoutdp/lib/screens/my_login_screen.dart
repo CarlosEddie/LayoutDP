@@ -45,9 +45,9 @@ class MyLoginScreen extends StatelessWidget {
                     MyLoginButton(
                       width: 273, 
                       height: 62, 
-                      text: 'Sign up with Email',
+                      text: 'Sign up with Social Media',
                       background: Colors.white, 
-                      textColor: Color(0xFF707375),
+                      textColor: loginGrey,
                     ),
                   ],
                 ),

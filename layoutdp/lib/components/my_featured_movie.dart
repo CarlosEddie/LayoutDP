@@ -43,7 +43,7 @@ class MyFeaturedMovie extends StatelessWidget {
                     width: 128,
                     height: 46,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Color(0xFF11FFFF)),
+                      border: Border.all(color: lightBlue),
                       borderRadius: BorderRadius.circular(14),
                     ),
                     child: Row(
