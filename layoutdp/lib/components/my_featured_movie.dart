@@ -11,67 +11,124 @@ class MyFeaturedMovie extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.black,
-      width: 327,
-      height: 195,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Container(
-            width: 327,
-            height: 177,
+    return Stack(
+      children: [
+        
+        Container(
+          color: backgroundColor,
+          width: 327,
+          height: 195,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                width: 327,
+                height: 177,
+                decoration: BoxDecoration(
+                  color: deepBlue,
+                  borderRadius: BorderRadius.circular(14),
+                ),
+              )
+            ],
+          ),
+        ),
+        Positioned(
+          top: 34,
+          left: 14,
+          child: Image(
+            image: AssetImage("assets/images/lucaLogo.png"),
+          ),
+        ),
+        Positioned(
+          top: 123,
+          left: 14,
+          child: Container(
+            margin: EdgeInsets.all(5),
+            width: 128,
+            height: 46,
             decoration: BoxDecoration(
-              color: deepBlue,
+              border: Border.all(color: lightBlue),
               borderRadius: BorderRadius.circular(14),
             ),
-            child: Stack(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Positioned(
-                  top: 20,
-                  left: 10,
-                  child: Image(
-                    image: AssetImage("assets/images/lucaLogo.png"),
-                    width: 83,
-                    height: 63,
-                  ),
-                ),
-                Positioned(
-                  top: 100,
-                  child: Container(
-                    margin: EdgeInsets.all(5),
-                    width: 128,
-                    height: 46,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: lightBlue),
-                      borderRadius: BorderRadius.circular(14),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.cast, size: 12, color: Colors.white,),
-                        TextButton(onPressed: () {}, child: Text("Watch Now", style: TextStyle(color: Colors.white,))),
-                      ],
-                    ),
-                  ),
-                ),
-                Positioned(
-                  left: 120,
-                  child: Image(
-                    image: AssetImage("assets/images/lucaChars.png"),
-                    width: 203,
-                    height: 195,
-                  ),
-                ),
+                Icon(Icons.cast, size: 12, color: Colors.white,),
+                TextButton(onPressed: () {}, child: Text("Watch Now", style: TextStyle(color: Colors.white, fontSize: 12))),
               ],
             ),
           ),
-        ],
-      ),
+        ),
+        Positioned(
+          left: 118,
+          child: Image(
+            image: AssetImage("assets/images/lucaChars.png"),
+
+          ),
+        ),
+      ],
     );
   }
 }
 
+// Container(
+//       color: Colors.black,
+//       width: 327,
+//       height: 195,
+//       child: Column(
+//         mainAxisAlignment: MainAxisAlignment.end,
+//         children: [
+//           Container(
+//             width: 327,
+//             height: 177,
+//             decoration: BoxDecoration(
+//               color: deepBlue,
+//               borderRadius: BorderRadius.circular(14),
+//             ),
+//             child: Stack(
+//               children: [
+//                 Positioned(
+//                   top: 20,
+//                   left: 10,
+//                   child: Image(
+//                     image: AssetImage("assets/images/lucaLogo.png"),
+//                     width: 83,
+//                     height: 63,
+//                   ),
+//                 ),
+//                 Positioned(
+//                   top: 100,
+//                   child: Container(
+//                     margin: EdgeInsets.all(5),
+//                     width: 128,
+//                     height: 46,
+//                     decoration: BoxDecoration(
+//                       border: Border.all(color: lightBlue),
+//                       borderRadius: BorderRadius.circular(14),
+//                     ),
+//                     child: Row(
+//                       mainAxisAlignment: MainAxisAlignment.center,
+//                       children: [
+//                         Icon(Icons.cast, size: 12, color: Colors.white,),
+//                         TextButton(onPressed: () {}, child: Text("Watch Now", style: TextStyle(color: Colors.white,))),
+//                       ],
+//                     ),
+//                   ),
+//                 ),
+//                 Positioned(
+//                   left: 120,
+//                   child: Image(
+//                     image: AssetImage("assets/images/lucaChars.png"),
+//                     width: 203,
+//                     height: 195,
+//                   ),
+//                 ),
+//               ],
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
 
 
 
