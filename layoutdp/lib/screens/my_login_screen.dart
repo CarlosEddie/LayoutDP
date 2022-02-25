@@ -46,7 +46,7 @@ class MyLoginScreen extends StatelessWidget {
                       width: 273, 
                       height: 62, 
                       text: 'Sign up with Social Media',
-                      background: Colors.white, 
+                      background: backgroundColor, 
                       textColor: loginGrey,
                     ),
                   ],
@@ -59,7 +59,14 @@ class MyLoginScreen extends StatelessWidget {
                 onPressed:(){
                   Navigator.pushNamed(context, "/myHomePageScreen");
                 }, 
-                child: const Text('Skip'))
+                child: Text(
+                  "Skip",
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontFamily: 'Play-Regular',
+                  ),
+                ),
+              ),
             ],
           ),
         ),

@@ -60,21 +60,33 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
             ),
             MyFeaturedMovie(),
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20.0),
+              margin: const EdgeInsets.symmetric(horizontal: 20.0,),
               child: Column(
                 children: [
                   Container(
+                    margin: const EdgeInsets.only(bottom: 5.0,),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           'Brand',
                           style: TextStyle(
-                            fontSize: 18.0,
                             color: Colors.black,
+                            fontSize: 18,
+                            fontFamily: 'Play-Regular'
                           ),
                         ),
-                        TextButton(onPressed: () {}, child: const Text('See All'))
+                        TextButton(
+                          onPressed: () {},
+                          child: const Text(
+                            'Brand',
+                            style: TextStyle(
+                              color: deepBlue,
+                              fontSize: 14,
+                              fontFamily: 'Play-Regular'
+                            ),
+                          )
+                        )
                       ],
                     ),
                   ),
@@ -92,11 +104,11 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
               ),
             ),
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 20.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -106,8 +118,9 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
                               Text(
                                 'New ',
                                 style: TextStyle(
-                                  fontSize: 18.0,
                                   color: Colors.black,
+                                  fontSize: 18,
+                                  fontFamily: 'Play-Regular'
                                 ),
                               ),
                               Image(
@@ -118,12 +131,22 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
                             ],
                           ),
                         ),
-                        TextButton(onPressed: () {}, child: const Text('See All'))
+                        TextButton(
+                          onPressed: () {},
+                          child: const Text(
+                            'See All',
+                            style: TextStyle(
+                              color: deepBlue,
+                              fontSize: 14,
+                              fontFamily: 'Play-Regular'
+                            ),
+                          )
+                        )
                       ],
                     ),
                   ),
                   Container(
-                    margin: const EdgeInsets.symmetric(vertical: 5.0),
+                    margin: const EdgeInsets.all(7.0),
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(

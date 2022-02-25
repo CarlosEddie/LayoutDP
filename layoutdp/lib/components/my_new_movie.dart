@@ -53,6 +53,7 @@ class MyNewMovie extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 12.0,
                       color: Colors.black,
+                      fontFamily: 'Play-Regular'
                       ),
                     ),
                   ),
@@ -67,6 +68,7 @@ class MyNewMovie extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 12.0,
                           color: Colors.black,
+                          fontFamily: 'Play-Regular'
                         ),
                       ),
                       MyCustomIconButton(
@@ -88,12 +90,13 @@ class MyNewMovie extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 12.0,
                                 color: Colors.black,
+                                fontFamily: 'Play-Regular'
                               ),
                             ),
                             Icon(
                               Icons.star,
                               color: starYellow,
-                              size: 12,
+                              size: 14,
                             )
                           ],
                         ),

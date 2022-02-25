@@ -47,7 +47,9 @@ class MyLoginButton extends StatelessWidget {
             child: Text(
               text.toUpperCase(),
               style: TextStyle(
-                color: textColor
+                color: textColor,
+                fontSize: 18,
+                fontFamily: 'Play-Regular',
               ),
             ),
           ),
