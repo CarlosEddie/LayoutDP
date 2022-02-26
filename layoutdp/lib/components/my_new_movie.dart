@@ -77,6 +77,7 @@ class MyNewMovie extends StatelessWidget {
                         icon: Icon (
                           Icons.play_arrow,
                           color: Colors.white,
+                          size: 20,
                         ), 
                         background: deepBlue, 
                         borderColor: deepBlue, 
