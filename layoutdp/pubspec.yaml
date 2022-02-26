@@ -78,6 +78,9 @@ flutter:
   - family: Play-Regular
     fonts:
     - asset: fonts/Play-Regular.ttf
+  - family: Sora-ExtraLight
+    fonts:
+    - asset: fonts/Sora-ExtraLight.ttf
   
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
