@@ -44,16 +44,44 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
                     width: 77.59,
                     height: 41.0,
                   ),
-                  MyCustomIconButton(
-                    width: 48,
-                    height: 49,
-                    icon: Icon (
-                      Icons.favorite_border,
-                      color: deepBlue,
-                    ), 
-                    background: backgroundColor, 
-                    borderColor: deepBlue, 
-                    radius: 16,
+                  Stack(
+                    children: [
+                      MyCustomIconButton(
+                        width: 48,
+                        height: 49,
+                        icon: Icon (
+                          Icons.favorite_border,
+                          color: deepBlue,
+                        ), 
+                        background: backgroundColor, 
+                        borderColor: deepBlue, 
+                        radius: 16,
+                      ),
+                      Positioned(
+                        child: Container(
+                          width: 10.0,
+                          height: 10.0,
+                          decoration: new BoxDecoration(
+                            color: notificationRed,
+                            border: Border.all(color: deepBlue),
+                            shape: BoxShape.circle,
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                '3',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 6,
+                                  fontFamily: 'Sora-ExtraLight'
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
                   ),
                 ],
               ),
