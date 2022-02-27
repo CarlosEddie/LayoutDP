@@ -13,7 +13,6 @@ class MyFeaturedMovie extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        
         Container(
           color: backgroundColor,
           width: 327,
@@ -32,7 +31,7 @@ class MyFeaturedMovie extends StatelessWidget {
             ],
           ),
         ),
-        Positioned(
+        const Positioned(
           top: 34,
           left: 14,
           child: Image(
@@ -43,7 +42,7 @@ class MyFeaturedMovie extends StatelessWidget {
           top: 123,
           left: 14,
           child: Container(
-            margin: EdgeInsets.all(5),
+            margin: const EdgeInsets.all(5),
             width: 128,
             height: 46,
             decoration: BoxDecoration(
@@ -53,15 +52,16 @@ class MyFeaturedMovie extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.cast, size: 12, color: Colors.white,),
+                const Icon(Icons.cast, size: 12, color: Colors.white,),
                 TextButton(
                 onPressed: () {},
-                 child: Text(
-                   "Watch Now", 
+                 child: const Text(
+                   'Watch Now', 
                     style: TextStyle(
-                     color: Colors.white, 
-                     fontSize: 12,
-                     fontFamily: 'Play-Regular'
+                      color: Colors.white, 
+                      fontSize: 12,
+                      fontFamily: 'Play-Regular',
+                      fontWeight: FontWeight.w400,
                     )
                   )
                 ),
@@ -69,7 +69,7 @@ class MyFeaturedMovie extends StatelessWidget {
             ),
           ),
         ),
-        Positioned(
+        const Positioned(
           left: 118,
           child: Image(
             image: AssetImage("assets/images/lucaChars.png"),

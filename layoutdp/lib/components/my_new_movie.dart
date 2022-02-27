@@ -18,98 +18,94 @@ class MyNewMovie extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Container(
-            width: 189,
-            height: 202,
-            margin: EdgeInsets.all(5),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: Colors.white,
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  width: 165.0,
-                  height: 117.0,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    image: DecorationImage(
-                      image: AssetImage(image),
-                      fit: BoxFit.fill
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Container(
+          width: 189,
+          height: 202,
+          margin: const EdgeInsets.all(5),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Colors.white,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                width: 165.0,
+                height: 117.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  image: DecorationImage(
+                    image: AssetImage(image),
+                    fit: BoxFit.fill
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 18),
+                  child: Text(
+                  title,
+                  style: const TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.black,
+                    fontFamily: 'Play-Regular',
+                    fontWeight: FontWeight.w400
                     ),
                   ),
                 ),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 18),
-                    child: Text(
-                    title,
-                    style: TextStyle(
+              ),  
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    time,
+                    style: const TextStyle(
                       fontSize: 12.0,
                       color: Colors.black,
-                      fontFamily: 'Play-Regular'
-                      ),
+                      fontFamily: 'Play-Regular',
+                      fontWeight: FontWeight.w400
                     ),
                   ),
-                ),
-                
-                Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  const MyCustomIconButton(
+                    width: 40, 
+                    height: 38, 
+                    icon: Icon (
+                      Icons.play_arrow_rounded,
+                      color: Colors.white,
+                      size: 20,
+                    ), 
+                    background: deepBlue, 
+                    borderColor: deepBlue, 
+                    radius: 12,
+                  ),
+                  Row(
                     children: [
                       Text(
-                        time,
-                        style: TextStyle(
+                        rating,
+                        style: const TextStyle(
                           fontSize: 12.0,
                           color: Colors.black,
-                          fontFamily: 'Play-Regular'
+                          fontFamily: 'Play-Regular',
+                          fontWeight: FontWeight.w400
                         ),
                       ),
-                      MyCustomIconButton(
-                        width: 40, 
-                        height: 38, 
-                        icon: Icon (
-                          Icons.play_arrow,
-                          color: Colors.white,
-                          size: 20,
-                        ), 
-                        background: deepBlue, 
-                        borderColor: deepBlue, 
-                        radius: 12,
-                      ),
-                      Container(
-                        child: Row(
-                          children: [
-                            Text(
-                              rating,
-                              style: TextStyle(
-                                fontSize: 12.0,
-                                color: Colors.black,
-                                fontFamily: 'Play-Regular'
-                              ),
-                            ),
-                            Icon(
-                              Icons.star,
-                              color: starYellow,
-                              size: 14,
-                            )
-                          ],
-                        ),
-                      ),
+                      const Icon(
+                        Icons.star,
+                        color: starYellow,
+                        size: 14,
+                      )
                     ],
                   ),
-                ),
-              ],
-            ),
+                ],
+              ),
+            ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

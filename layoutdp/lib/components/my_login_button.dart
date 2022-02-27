@@ -50,6 +50,7 @@ class MyLoginButton extends StatelessWidget {
                 color: textColor,
                 fontSize: 18,
                 fontFamily: 'Play-Regular',
+                fontWeight: FontWeight.w400
               ),
             ),
           ),

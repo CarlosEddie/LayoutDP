@@ -33,20 +33,20 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
                     decoration: BoxDecoration(
                       border: Border.all(color: deepBlue),
                       borderRadius: BorderRadius.circular(16),
-                      image: DecorationImage(
+                      image: const DecorationImage(
                         image: AssetImage("assets/images/perfil.png"),
                         fit: BoxFit.fill
                       ),
                     ),
                   ),
-                  Image(
+                  const Image(
                     image: AssetImage("assets/images/dpLogo.png"),
                     width: 77.59,
                     height: 41.0,
                   ),
                   Stack(
                     children: [
-                      MyCustomIconButton(
+                      const MyCustomIconButton(
                         width: 48,
                         height: 49,
                         icon: Icon (
@@ -61,32 +61,32 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
                         child: Container(
                           width: 10.0,
                           height: 10.0,
-                          decoration: new BoxDecoration(
+                          decoration: BoxDecoration(
                             color: notificationRed,
                             border: Border.all(color: deepBlue),
                             shape: BoxShape.circle,
                           ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                '3',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 6,
-                                  fontFamily: 'Sora-ExtraLight'
-                                ),
-                              ),
-                            ],
-                          ),
                         ),
+                      ),
+                      const Positioned(
+                        top: 1.5,
+                        left: 3,
+                        child: Text(
+                          '3',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 6,
+                            fontFamily: 'Sora-ExtraLight',
+                            fontWeight: FontWeight.w200
+                          ),
+                        ), 
                       )
                     ],
                   ),
                 ],
               ),
             ),
-            MyFeaturedMovie(),
+            const MyFeaturedMovie(),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 20.0,),
               child: Column(
@@ -96,67 +96,13 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           'Brand',
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 18,
-                            fontFamily: 'Play-Regular'
-                          ),
-                        ),
-                        TextButton(
-                          onPressed: () {},
-                          child: const Text(
-                            'Brand',
-                            style: TextStyle(
-                              color: deepBlue,
-                              fontSize: 14,
-                              fontFamily: 'Play-Regular'
-                            ),
-                          )
-                        )
-                      ],
-                    ),
-                  ),
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        MyBrandButton(image: "assets/images/disneyBrand.png", background: Colors.white),
-                        MyBrandButton(image: "assets/images/pixarBrand.png", background: Colors.white),
-                        MyBrandButton(image: "assets/images/marvelBrand.png", background: Colors.white),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
-            Container(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 20.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          child: Row(
-                            children: [
-                              Text(
-                                'New ',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18,
-                                  fontFamily: 'Play-Regular'
-                                ),
-                              ),
-                              Image(
-                                image: AssetImage("assets/images/dpLogo.png"),
-                                width: 48.0,
-                                height: 25.37,
-                              ),
-                            ],
+                            fontFamily: 'Play-Regular',
+                            fontWeight: FontWeight.w400
                           ),
                         ),
                         TextButton(
@@ -166,90 +112,142 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
                             style: TextStyle(
                               color: deepBlue,
                               fontSize: 14,
-                              fontFamily: 'Play-Regular'
+                              fontFamily: 'Play-Regular',
+                              fontWeight: FontWeight.w400
                             ),
                           )
                         )
                       ],
                     ),
                   ),
-                  Container(
-                    margin: const EdgeInsets.all(7.0),
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: [
-                          MyNewMovie(
-                            image: "assets/images/legoStarWars.png", 
-                            title: "Lego Star Wars Terrifying Tal", 
-                            time: "1 hour", 
-                            rating: "9.5"
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      MyBrandButton(image: "assets/images/disneyBrand.png", background: Colors.white),
+                      MyBrandButton(image: "assets/images/pixarBrand.png", background: Colors.white),
+                      MyBrandButton(image: "assets/images/marvelBrand.png", background: Colors.white),
+                    ],
+                  )
+                ],
+              ),
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: const [
+                          Text(
+                            'New ',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 18,
+                              fontFamily: 'Play-Regular',
+                              fontWeight: FontWeight.w400
+                            ),
                           ),
-                          MyNewMovie(
-                            image: "assets/images/jungleCruise.png", 
-                            title: "Jungle Cruise", 
-                            time: "1 hour", 
-                            rating: "9.5"
-                          ),
-                          MyNewMovie(
-                            image: "assets/images/legoStarWars.png", 
-                            title: "Lego Star Wars Terrifying Tal", 
-                            time: "1 hour", 
-                            rating: "9.5"
-                          ),
-                          MyNewMovie(
-                            image: "assets/images/legoStarWars.png", 
-                            title: "Jungle Cruise", 
-                            time: "1 hour", 
-                            rating: "9.5"
+                          Image(
+                            image: AssetImage("assets/images/dpLogo.png"),
+                            width: 48.0,
+                            height: 25.37,
                           ),
                         ],
                       ),
-                    ),
+                      TextButton(
+                        onPressed: () {},
+                        child: const Text(
+                          'See All',
+                          style: TextStyle(
+                            color: deepBlue,
+                            fontSize: 14,
+                            fontFamily: 'Play-Regular',
+                            fontWeight: FontWeight.w400
+                          ),
+                        )
+                      )
+                    ],
                   ),
-                  Container(
-                    width: 327,
-                    height: 68,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(19),
-                      color: Colors.white, 
-                    ),
+                ),
+                Container(
+                  margin: const EdgeInsets.all(7.0),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        IconButton(
-                          onPressed: () {}, 
-                          icon: Icon(
-                            Icons.airplay,
-                            color: deepBlue,
-                          )
+                      children: const [
+                        MyNewMovie(
+                          image: "assets/images/legoStarWars.png", 
+                          title: "Lego Star Wars Terrifying Tal", 
+                          time: "1 hour", 
+                          rating: "9.5"
                         ),
-                        IconButton(
-                          onPressed: () {}, 
-                          icon: Icon(
-                            Icons.search,
-                            color: deepBlue,
-                          )
+                        MyNewMovie(
+                          image: "assets/images/jungleCruise.png", 
+                          title: "Jungle Cruise", 
+                          time: "1 hour", 
+                          rating: "9.5"
                         ),
-                        IconButton(
-                          onPressed: () {}, 
-                          icon: Icon(
-                            Icons.notifications_none,
-                            color: deepBlue,
-                          )
+                        MyNewMovie(
+                          image: "assets/images/legoStarWars.png", 
+                          title: "Lego Star Wars Terrifying Tal", 
+                          time: "1 hour", 
+                          rating: "9.5"
                         ),
-                        IconButton(
-                          onPressed: () {}, 
-                          icon: Icon(
-                            Icons.widgets_outlined,
-                            color: deepBlue,
-                          )
+                        MyNewMovie(
+                          image: "assets/images/jungleCruise.png", 
+                          title: "Jungle Cruise", 
+                          time: "1 hour", 
+                          rating: "9.5"
                         ),
                       ],
                     ),
                   ),
-                ],
-              ),
+                ),
+                Container(
+                  width: 327,
+                  height: 68,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(19),
+                    color: Colors.white, 
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      IconButton(
+                        onPressed: () {}, 
+                        icon: const Icon(
+                          Icons.airplay,
+                          color: deepBlue,
+                        )
+                      ),
+                      IconButton(
+                        onPressed: () {}, 
+                        icon: const Icon(
+                          Icons.search,
+                          color: deepBlue,
+                        )
+                      ),
+                      IconButton(
+                        onPressed: () {}, 
+                        icon: const Icon(
+                          Icons.notifications_none,
+                          color: deepBlue,
+                        )
+                      ),
+                      IconButton(
+                        onPressed: () {}, 
+                        icon: const Icon(
+                          Icons.widgets_outlined,
+                          color: deepBlue,
+                        )
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ],
         ),

@@ -59,11 +59,12 @@ class MyLoginScreen extends StatelessWidget {
                 onPressed:(){
                   Navigator.pushNamed(context, "/myHomePageScreen");
                 }, 
-                child: Text(
-                  "Skip",
+                child: const Text(
+                  'Skip',
                   style: TextStyle(
                     fontSize: 14,
                     fontFamily: 'Play-Regular',
+                    fontWeight: FontWeight.w400
                   ),
                 ),
               ),
