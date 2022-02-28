@@ -2,8 +2,8 @@
 
 ## Telas.
 
-![Login Page](assets/images/homePageImage.png)
-![Home Page](assets/images/loginPageImage.png)
+![Login Page](layoutdp/assets/images/homePageImage.png)
+![Home Page](layoutdp/assets/images/loginPageImage.png)
 
 Telefone usado:
 Galaxy S8+
