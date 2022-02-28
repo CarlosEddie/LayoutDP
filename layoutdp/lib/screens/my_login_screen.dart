@@ -17,7 +17,7 @@ class MyLoginScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                margin: const EdgeInsets.symmetric(vertical: 50.0, horizontal: 20.0),
+                margin: const EdgeInsets.only(top: 140.0),
                 child: Column(
                   children: const [
                     Align(
@@ -32,7 +32,7 @@ class MyLoginScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(top: 50, bottom: 25),
+                margin: const EdgeInsets.only(top: 90, bottom: 25),
                 child: Column(
                   children: const [
                     MyLoginButton(
