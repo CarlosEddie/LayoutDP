@@ -20,7 +20,7 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
       backgroundColor: backgroundColor,
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -173,7 +173,7 @@ class _MyHomePageScreenState extends State<MyHomePageScreen> {
                   ),
                 ),
                 Container(
-                  margin: const EdgeInsets.all(7.0),
+                  margin: const EdgeInsets.only(left: 7.0, top: 7.0, bottom: 7.0),
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
